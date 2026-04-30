@@ -14,31 +14,19 @@
   --font:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;--r:16px;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
-
 body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;overflow-x:hidden}
-
 .blob{position:fixed;border-radius:50%;filter:blur(130px);pointer-events:none;z-index:0}
 .b1{width:650px;height:650px;background:radial-gradient(circle,rgba(255,45,45,.07) 0%,transparent 70%);top:-220px;left:-120px}
 .b2{width:450px;height:450px;background:radial-gradient(circle,rgba(255,45,45,.04) 0%,transparent 70%);bottom:-130px;right:-80px}
-
 .wrap{position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:26px 20px 80px}
-
-/* GLASS */
 .g{background:var(--glass);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border:1px solid var(--glass-b);border-radius:var(--r);position:relative;overflow:hidden;transition:border-color .2s,background .2s}
 .g::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.025) 0%,transparent 55%);pointer-events:none}
 .g:hover{background:var(--glass-h);border-color:rgba(255,255,255,.11)}
-
-/* HEADER */
 .hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:12px}
 .hdr-l{display:flex;align-items:center;gap:13px}
 .ball{width:46px;height:46px;background:linear-gradient(135deg,var(--red),#7a0000);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:21px;box-shadow:0 0 22px var(--red-glow),inset 0 1px 0 rgba(255,255,255,.18);flex-shrink:0}
-.brand{font-size:18px;font-weight:700;letter-spacing:-.4px}
-.brand-s{font-size:9.5px;color:var(--t2);letter-spacing:2px;text-transform:uppercase;margin-top:3px}
-.hdr-r{text-align:right}
-.hdr-date{font-size:11px;color:var(--t2);margin-bottom:2px}
-.hdr-wk{font-size:14px;font-weight:600;color:var(--red)}
-
-/* NAV */
+.brand{font-size:18px;font-weight:700;letter-spacing:-.4px}.brand-s{font-size:9.5px;color:var(--t2);letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+.hdr-r{text-align:right}.hdr-date{font-size:11px;color:var(--t2);margin-bottom:2px}.hdr-wk{font-size:14px;font-weight:600;color:var(--red)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;margin-bottom:26px;flex-wrap:wrap;gap:10px}
 .nav-live{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--t2)}
 .dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 7px var(--green);animation:blink 2s ease infinite;flex-shrink:0}
@@ -49,75 +37,56 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 .wb:hover:not(:disabled){background:var(--red-mid);border-color:var(--red);color:#fff}
 .wb:disabled{opacity:.18;cursor:not-allowed}
 .ws{background:var(--glass);border:1px solid var(--glass-b);border-radius:9px;color:var(--text);font-family:var(--font);font-size:11.5px;padding:7px 13px;cursor:pointer;outline:none;min-width:205px;backdrop-filter:blur(12px);-webkit-appearance:none;appearance:none}
-.ws:focus{border-color:var(--red)}
-.ws option{background:#181818}
-.nav-status{font-size:10px;color:var(--t3);margin-left:auto}
-
-/* SECTION */
+.ws:focus{border-color:var(--red)}.ws option{background:#181818}
+.nav-status{font-size:10px;color:var(--t3)}
 .sh{display:flex;align-items:center;gap:9px;margin:26px 0 12px}
 .pill{font-size:9px;font-weight:700;letter-spacing:2px;padding:3px 10px;border-radius:20px;text-transform:uppercase;white-space:nowrap}
 .pr{background:var(--red-mid);color:var(--red);border:1px solid var(--red-soft)}
 .pw{background:rgba(255,255,255,.045);color:#aaa;border:1px solid rgba(255,255,255,.08)}
 .st{font-size:11.5px;font-weight:500;color:var(--t2);letter-spacing:.2px}
 .sl{flex:1;height:1px;background:linear-gradient(90deg,var(--glass-b),transparent)}
-
-/* GRIDS */
 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .g2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .g5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.gcity{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gcity{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .gloc{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .mb{margin-bottom:10px}
-
-/* KPI CARD */
 .kc{padding:16px 17px 14px}
 .kc-r{border-top:1.5px solid var(--red)!important}
 .kl{font-size:9.5px;color:var(--t2);text-transform:uppercase;letter-spacing:1.3px;font-weight:500;margin-bottom:9px;line-height:1.4}
 .kv{font-size:24px;font-weight:700;line-height:1;margin-bottom:6px;letter-spacing:-.5px;transition:all .2s}
-.kv.lg{font-size:29px}
-.kv.sm{font-size:18px}
+.kv.lg{font-size:29px}.kv.sm{font-size:18px}
 .kp{font-size:9px;color:var(--t3);margin-top:4px}
-
-/* DELTA */
 .kd{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:600;padding:2px 6px;border-radius:20px}
-.dup{background:var(--green-s);color:var(--green)}
-.ddn{background:var(--red-soft);color:var(--red)}
-.dfl{background:rgba(255,255,255,.035);color:var(--t3)}
-
-/* CITY */
+.dup{background:var(--green-s);color:var(--green)}.ddn{background:var(--red-soft);color:var(--red)}.dfl{background:rgba(255,255,255,.035);color:var(--t3)}
 .cc{padding:13px 15px}
 .cn{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--t2);margin-bottom:9px}
 .cm{display:flex;gap:9px}
 .cml{font-size:8px;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:2px}
 .cmv{font-size:14px;font-weight:700;letter-spacing:-.3px}
 .cnotes{font-size:8px;color:var(--t3);margin-top:7px;letter-spacing:.3px}
-
-/* TOTAL */
 .tot{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid var(--red-mid)!important}
 .tot-l{font-size:9.5px;color:var(--t2);text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
 .tot-m{display:flex;gap:20px}
 .tm-v{font-size:19px;font-weight:700;letter-spacing:-.3px;color:var(--red)}
 .tm-l{font-size:8px;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-top:1px}
-
-/* LOC */
 .olc{padding:14px 15px}
 .olc-n{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--t2);margin-bottom:7px}
 .olc-r{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap}
 .olc-ml{font-size:7.5px;color:var(--t3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:2px;white-space:nowrap}
 .olc-mv{font-size:13px;font-weight:700;letter-spacing:-.2px;white-space:nowrap}
-
-/* MONTH */
 .mc{padding:20px 22px;background:linear-gradient(135deg,rgba(255,45,45,.05) 0%,rgba(255,255,255,.01) 100%)}
 .mt{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:7px}
 .mn-t{font-size:15px;font-weight:700;letter-spacing:-.3px}
 .mn-b{font-size:10px;padding:3px 11px;border-radius:20px;background:var(--red-soft);color:var(--red);border:1px solid var(--red-mid);font-weight:600}
 .mkg{padding:12px;background:rgba(255,255,255,.025);border-radius:10px;border:1px solid var(--glass-b)}
-
-/* ERROR */
-.err{background:rgba(255,45,45,.07);border:1px solid rgba(255,45,45,.15);border-radius:12px;padding:16px 20px;font-size:12px;color:#ff8080;margin-bottom:16px;display:none}
-
-/* LOADER */
+/* offline month badge */
+.off-mo{display:inline-block;font-size:10px;padding:2px 10px;border-radius:20px;background:rgba(255,45,45,.07);color:var(--red);border:1px solid var(--red-soft);margin-left:8px;font-weight:600}
+/* standup */
+.std-card{padding:16px 18px;border-left:2px solid var(--red)!important}
+.std-empty{font-size:11px;color:var(--t3);font-style:italic;padding:8px 0}
+/* loader */
 .ldr{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99;transition:opacity .6s}
 .ldr.gone{opacity:0;pointer-events:none}
 .ldr-i{font-size:36px;margin-bottom:16px;animation:sp 2.5s linear infinite}
@@ -125,24 +94,21 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 .lbar{width:140px;height:1.5px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden;margin-bottom:10px}
 .lfill{height:100%;width:0%;background:linear-gradient(90deg,var(--red),#ff6b6b);border-radius:2px;transition:width .35s}
 .ltxt{font-size:9.5px;color:var(--t3);letter-spacing:1.2px}
-
-@media(max-width:1100px){.g5{grid-template-columns:repeat(3,1fr)}.gloc{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1100px){.g5{grid-template-columns:repeat(3,1fr)}.gloc{grid-template-columns:repeat(3,1fr)}.gcity{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}.gcity{grid-template-columns:repeat(2,1fr)}.gloc{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.g4,.g3,.g2,.g5,.gcity,.gloc{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
 <div class="blob b1"></div><div class="blob b2"></div>
-
 <div class="ldr" id="ldr">
   <div class="ldr-i">🎳</div>
   <div class="lbar"><div class="lfill" id="lfill"></div></div>
   <div class="ltxt" id="ltxt">Подключаемся к Google Sheets...</div>
 </div>
-
 <div class="wrap">
 
+  <!-- ШАПКА -->
   <div class="hdr">
     <div class="hdr-l">
       <div class="ball">🎳</div>
@@ -154,10 +120,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
     </div>
   </div>
 
+  <!-- НАВ -->
   <div class="nav g">
     <div class="nav-live">
       <div class="dot" id="statusDot"></div>
-      <span id="statusText">Загрузка данных...</span>
+      <span id="statusText">Загрузка...</span>
     </div>
     <div class="wn">
       <button class="wb" id="bPrev" onclick="shift(-1)">←</button>
@@ -166,8 +133,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
     </div>
     <div class="nav-status">Обновлено: <span id="upd">—</span></div>
   </div>
-
-  <div class="err" id="errBox"></div>
 
   <!-- ОНЛАЙН -->
   <div class="sh"><div class="pill pr">ОНЛАЙН</div><div class="st">Реклама · Директ + ВК</div><div class="sl"></div></div>
@@ -178,17 +143,18 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
     <div class="kc g kc-r"><div class="kl">CTR</div><div class="kv" id="o-ctr">—</div><div id="o-ctr-d"></div><div class="kp" id="o-ctr-p"></div></div>
   </div>
 
-  <div class="sh" style="margin-top:18px"><div class="pill pw">СОЦСЕТИ</div><div class="st">Охваты · Вовлечённость · Переходы · Блогеры</div><div class="sl"></div></div>
+  <!-- СОЦСЕТИ -->
+  <div class="sh" style="margin-top:18px"><div class="pill pw">СОЦСЕТИ</div><div class="st">Охваты · Вовлечённость · Переходы</div><div class="sl"></div></div>
   <div class="g4 mb">
     <div class="kc g"><div class="kl">Охваты сеть</div><div class="kv sm" id="o-reach">—</div><div id="o-reach-d"></div><div class="kp" id="o-reach-p"></div></div>
-    <div class="kc g"><div class="kl">Вовлечённость</div><div class="kv sm" id="o-eng">—</div><div id="o-eng-d"></div><div class="kp" id="o-eng-p"></div></div>
+    <div class="kc g"><div class="kl">Вовлечённость</div><div class="kv sm" id="o-eng">—</div><div class="kp" id="o-eng-p"></div></div>
     <div class="kc g"><div class="kl">Переходы сеть</div><div class="kv sm" id="o-tr">—</div><div id="o-tr-d"></div><div class="kp" id="o-tr-p"></div></div>
     <div class="kc g"><div class="kl">Лиды сеть</div><div class="kv sm" id="o-ld">—</div><div id="o-ld-d"></div><div class="kp" id="o-ld-p"></div></div>
   </div>
   <div class="g4 mb">
     <div class="kc g"><div class="kl">ВКонтакте · охваты</div><div class="kv sm" id="o-vk">—</div><div id="o-vk-d"></div><div class="kp" id="o-vk-p"></div></div>
-    <div class="kc g"><div class="kl">Instagram · охваты</div><div class="kv sm" id="o-ig">—</div><div class="kp" id="o-ig-p">нет данных за период</div></div>
-    <div class="kc g"><div class="kl">Telegram · охваты</div><div class="kv sm" id="o-tg">—</div><div class="kp" id="o-tg-p">нет данных за период</div></div>
+    <div class="kc g"><div class="kl">Instagram · охваты</div><div class="kv sm" id="o-ig">—</div><div class="kp" id="o-ig-p"></div></div>
+    <div class="kc g"><div class="kl">Telegram · охваты</div><div class="kv sm" id="o-tg">—</div><div class="kp" id="o-tg-p"></div></div>
     <div class="kc g"><div class="kl">Блогеры · охват</div><div class="kv sm" id="o-br">—</div><div class="kp" id="o-br-p"></div></div>
   </div>
 
@@ -213,8 +179,15 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
     <div class="kc g kc-r"><div class="kl">Конверсия в бронь</div><div class="kv" id="s-c">—</div><div class="kp">от числа посетителей</div></div>
   </div>
 
-  <!-- ОФФЛАЙН -->
-  <div class="sh"><div class="pill pr">ОФФЛАЙН</div><div class="st">Охваты по городам · KPI Оффлайн</div><div class="sl"></div></div>
+  <!-- ОФФЛАЙН — данные из листа KPI Офлайн -->
+  <div class="sh">
+    <div class="pill pr">ОФФЛАЙН</div>
+    <div class="st">Охваты по городам · KPI Оффлайн</div>
+    <div class="sl"></div>
+    <span class="off-mo" id="offMonthBadge">—</span>
+  </div>
+
+  <!-- Суммарный итог по сети -->
   <div class="g tot mb">
     <div class="tot-l">Сеть · Общий итог</div>
     <div class="tot-m">
@@ -223,13 +196,22 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
       <div><div class="tm-v" id="off-cv" style="color:var(--text)">—</div><div class="tm-l">Конверсия</div></div>
     </div>
   </div>
+
+  <!-- Города -->
   <div class="gcity mb" id="cityGrid"></div>
 
+  <!-- Локации (KPI из листа План) -->
   <div class="sh" style="margin-top:4px"><div class="pill pw">ЛОКАЦИИ</div><div class="st">Выручка · Гости · Средний чек · текущий месяц</div><div class="sl"></div></div>
   <div class="gloc mb" id="locGrid"></div>
 
+  <!-- СТЕНДАП-КОНЦЕРТЫ -->
+  <div class="sh"><div class="pill pw">СТЕНДАП / СОБЫТИЯ</div><div class="st">Плановые мероприятия · лист 2026</div><div class="sl"></div></div>
+  <div class="g std-card mb" id="standupCard">
+    <div class="std-empty" id="standupInner">Загрузка...</div>
+  </div>
+
   <!-- МЕСЯЦ -->
-  <div class="sh"><div class="pill pr">МЕСЯЦ</div><div class="st" id="mSecT">Итого за текущий месяц · накопленно</div><div class="sl"></div></div>
+  <div class="sh"><div class="pill pr">МЕСЯЦ</div><div class="st" id="mSecT">Итого за текущий месяц</div><div class="sl"></div></div>
   <div class="g mc mb">
     <div class="mt">
       <div class="mn-t" id="mTitle">—</div>
@@ -245,40 +227,42 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
   </div>
 
   <div style="margin-top:28px;text-align:center;font-size:10px;color:var(--t3)">
-    Данные подгружаются напрямую из Google Sheets при каждом открытии
+    Данные из Google Sheets · обновляются при каждом открытии
   </div>
-
 </div>
 
 <script>
-// ═══════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════
 // КОНФИГУРАЦИЯ
-// ═══════════════════════════════════════════════════════════
-
+// ═══════════════════════════════════════════════
 const SHEET_ID = '1MpIjmxXbWOM1SZ4xMv7RCUBLwOYs7NzODz9hM3vQJiA';
 
-// URL для получения данных без API key (работает для публичных таблиц)
-function gvizUrl(sheetName, range) {
-  const base = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq`;
-  const params = new URLSearchParams({
-    tqx: 'out:json',
-    sheet: sheetName,
-    range: range
-  });
-  return `${base}?${params}`;
-}
+// Оффлайн данные помесячно из листа KPI Офлайн
+// Структура: D3=охваты, E3=переходы, F3=конверсия за предыдущий месяц
+// Логика: весь апрель показываем МАРТ, весь май — АПРЕЛЬ и т.д.
+const OFFLINE_MONTHLY = {
+  // Ключ = месяц когда ПОКАЗЫВАЕМ данные, значение = данные за ПРЕДЫДУЩИЙ месяц
+  4: { // Апрель — показываем данные МАРТА
+    label: 'МАРТ 2026',
+    total: { reach: 6796134, tr: 36383, cv: '0,5%' },
+    cities: [
+      { city:'ТЮМЕНЬ',        r:1621120, tr:2033,  cv:'0,1%',  notes:'Сити Молл · Остров · Колумб · партнёры' },
+      { city:'НИЖНЕВАРТОВСК', r:364851,  tr:3955,  cv:'1,1%',  notes:'ЮграМолл · партнёры' },
+      { city:'ИЖЕВСК',        r:953162,  tr:3278,  cv:'0,3%',  notes:'Матрица · Петровский · партнёры' },
+      { city:'СУРГУТ',        r:491270,  tr:641,   cv:'0,1%',  notes:'Аура ТРЦ · партнёры' },
+      { city:'САМАРА',        r:1526243, tr:3745,  cv:'0,2%',  notes:'Летаут · Гудок · партнёры' },
+      { city:'МОСКВА',        r:1219702, tr:1790,  cv:'0,1%',  notes:'Сев. Сияние · Красный Кит' },
+      { city:'ПИТЕР',         r:582332,  tr:877,   cv:'0,2%',  notes:'Июнь' },
+    ]
+  },
+  5: { // Май — показываем АПРЕЛЬ (пока нет данных — будет пусто)
+    label: 'АПРЕЛЬ 2026',
+    total: { reach: null, tr: null, cv: null },
+    cities: []
+  }
+};
 
-// Статичные данные оффлайн (обновляются раз в месяц вручную)
-const CITIES = [
-  { city:'ТЮМЕНЬ',       r:1561516, tr:2023, cv:'0,1%', notes:'Сити Молл · Остров · Колумб' },
-  { city:'НИЖНЕВАРТОВСК',r:365040,  tr:3955, cv:'1,1%', notes:'ЮграМолл · партнёры' },
-  { city:'ИЖЕВСК',       r:1036553, tr:6735, cv:'0,6%', notes:'Матрица · Петровский' },
-  { city:'СУРГУТ',       r:491270,  tr:641,  cv:'0,1%', notes:'Аура ТРЦ · партнёры' },
-  { city:'САМАРА',       r:2019263, tr:5069, cv:'0,3%', notes:'Летаут · Гудок' },
-  { city:'МОСКВА + СПБ', r:1803134, tr:2667, cv:'0,1%', notes:'Сев. Сияние · Красный Кит · Июнь' },
-];
-const OFF_TOTAL = { reach: 6796134, tr: 36383, cv: '0,5%' };
-
+// Локации из листа План (месячные KPI)
 const LOCS = [
   { n:'Сити Тюмень',        r:13000000, g:7222, ch:1800, lfl:'−12%' },
   { n:'Остров Тюмень',      r:13400000, g:7444, ch:1800, lfl:null },
@@ -294,394 +278,391 @@ const LOCS = [
   { n:'Кит Москва',         r:11000000, g:4400, ch:2500, lfl:null },
 ];
 
-// ═══════════════════════════════════════════════════════════
-// ХРАНИЛИЩЕ ДАННЫХ
-// ═══════════════════════════════════════════════════════════
-
-let WEEKS = [];   // [{n, dates, mo, mn}]
-let DATA  = {};   // {weekNum: {budget, shows, clicks, ctr, reach, eng, tr, ld, vk, br, guests, loyal, pct, cards, dr, tue, vis, book, siteConv}}
+// ═══════════════════════════════════════════════
+// ДАННЫЕ
+// ═══════════════════════════════════════════════
+let WEEKS = [];
+let DATA  = {};
 let cur   = 0;
 
-// ═══════════════════════════════════════════════════════════
-// ЗАГРУЗКА ДАННЫХ
-// ═══════════════════════════════════════════════════════════
-
-async function fetchSheet(sheetName, range) {
-  const url = gvizUrl(sheetName, range);
-  const resp = await fetch(url);
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-  const text = await resp.text();
-  // gviz возвращает: /*O_o*/\ngoogle.visualization.Query.setResponse({...});
-  const json = JSON.parse(text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\)/)[1]);
-  return json.table;
+// Недели и месяцы (2025 год → 2026 апрель)
+const MONTH_NAMES = ['','Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+function weekToMonth(n) {
+  if(n>=1&&n<=4)   return 1;
+  if(n>=5&&n<=8)   return 2;
+  if(n>=9&&n<=13)  return 3;
+  if(n>=14&&n<=17) return 4;
+  if(n>=18&&n<=22) return 5;
+  if(n>=23&&n<=26) return 6;
+  return Math.ceil(n/4);
 }
 
-// Парсит таблицу gviz в массив массивов
-function tableToMatrix(table) {
-  if (!table || !table.rows) return [];
-  return table.rows.map(row =>
-    (row.c || []).map(cell => (cell && cell.v != null ? cell.v : null))
-  );
+// ═══════════════════════════════════════════════
+// ЗАГРУЗКА ИЗ GOOGLE SHEETS
+// ═══════════════════════════════════════════════
+function gviz(sheet, range) {
+  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(sheet)}&range=${range}`;
+  return fetch(url)
+    .then(r => r.text())
+    .then(t => {
+      const json = JSON.parse(t.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\)/)[1]);
+      return (json.table?.rows || []).map(row =>
+        (row.c || []).map(c => c?.v ?? null)
+      );
+    });
 }
 
-// Находит строку по подстроке в первой ячейке
-function findRow(matrix, keyword) {
-  keyword = keyword.toLowerCase();
-  return matrix.find(row => row[0] && String(row[0]).toLowerCase().includes(keyword));
+function n(v) {
+  if(v==null||v==='') return null;
+  if(typeof v==='number') return isNaN(v)?null:v;
+  const s=String(v).replace(/\s/g,'').replace(',','.').replace(/[^\d.-]/g,'');
+  const x=parseFloat(s); return isNaN(x)?null:x;
+}
+function pct(v) {
+  if(v==null) return null;
+  if(typeof v==='number') { const p=v<1?v*100:v; return p.toFixed(1).replace('.',',')+'\u202f%'; }
+  const s=String(v); if(s.includes('%')) return s.replace('.',',');
+  const x=parseFloat(s.replace(',','.')); if(!isNaN(x)) return (x<1?x*100:x).toFixed(1).replace('.',',')+'\u202f%';
+  return null;
+}
+function findRow(matrix, kw) {
+  kw=kw.toLowerCase();
+  return matrix.find(r=>r[0]&&String(r[0]).toLowerCase().includes(kw))||null;
+}
+function findRowLast(matrix, kw) {
+  kw=kw.toLowerCase();
+  return [...matrix].reverse().find(r=>r[0]&&String(r[0]).toLowerCase().includes(kw))||null;
+}
+function getWeeksRow(matrix) {
+  for(let i=0;i<Math.min(matrix.length,10);i++) {
+    const nums=matrix[i].filter(v=>typeof v==='number'&&v>0&&v<60);
+    if(nums.length>8) return { row:matrix[i], datesRow:matrix[i+1]||null, idx:i };
+  }
+  return null;
 }
 
-// Берёт последние N непустых числовых значений из строки (с индекса startCol)
-function lastNValues(row, n = 20, startCol = 1) {
-  const vals = [];
-  for (let i = startCol; i < row.length; i++) {
-    const v = row[i];
-    if (v != null && v !== '' && !String(v).includes('REF') && !String(v).includes('DIV')) {
-      vals.push({ idx: i, val: v });
+async function loadOnline() {
+  // ── Основные метрики: бюджет, показы, клики, CTR ──
+  const matrix = await gviz('KPI онлайн', 'A1:DZ10');
+  const wr = getWeeksRow(matrix);
+  if(!wr) return;
+  const {row:weeksRow, datesRow} = wr;
+
+  // Строки 3-10 первого блока
+  const fullMatrix = await gviz('KPI онлайн', 'A1:DZ10');
+  const budgetRow  = findRow(fullMatrix,'бюджет директ') || findRow(fullMatrix,'бюджет');
+  const showsRow   = findRow(fullMatrix,'показы директ') || findRow(fullMatrix,'показы');
+  const clicksRow  = findRow(fullMatrix,'клики директ')  || findRow(fullMatrix,'клики');
+  const ctrRow     = findRow(fullMatrix,'ctr');
+
+  if(!budgetRow) return;
+
+  for(let col=1;col<budgetRow.length;col++) {
+    const wNum=weeksRow[col];
+    if(typeof wNum!=='number'||wNum<1||wNum>60) continue;
+    const bv=budgetRow[col];
+    if(bv==null) continue;
+    const wn=Math.round(wNum);
+    const mn=weekToMonth(wn);
+    const dates=datesRow?String(datesRow[col]||'').trim():'';
+    if(!WEEKS.find(w=>w.n===wn)) WEEKS.push({n:wn,dates,mo:MONTH_NAMES[mn],mn});
+    if(!DATA[wn]) DATA[wn]={};
+    DATA[wn].budget = n(bv);
+    if(showsRow)  DATA[wn].shows  = n(showsRow[col]);
+    if(clicksRow) DATA[wn].clicks = n(clicksRow[col]);
+    if(ctrRow)    DATA[wn].ctr    = pct(ctrRow[col]);
+  }
+
+  // ── Охваты соцсетей: второй блок (строки ~130+) ──
+  const socMatrix = await gviz('KPI онлайн', 'A125:DZ200');
+  let socWeeksRow = null, socWeeksIdx = -1;
+  for(let i=0;i<Math.min(socMatrix.length,15);i++) {
+    const nums=socMatrix[i].filter(v=>typeof v==='number'&&v>0&&v<60);
+    if(nums.length>6){socWeeksRow=socMatrix[i];socWeeksIdx=i;break;}
+  }
+  const reachRow = findRow(socMatrix,'охваты сеть');
+  const engRow   = findRow(socMatrix,'вовлеч');
+  const trRow    = findRow(socMatrix,'переходы сеть');
+  const ldRow    = findRow(socMatrix,'лиды сеть');
+  const blogRow  = findRowLast(socMatrix,'блогер') || findRowLast(socMatrix,'blogger');
+
+  if(reachRow && socWeeksRow) {
+    for(let col=1;col<reachRow.length;col++) {
+      const wNum=socWeeksRow[col];
+      if(typeof wNum!=='number'||wNum<1||wNum>60) continue;
+      const rv=reachRow[col];
+      if(rv==null) continue;
+      const wn=Math.round(wNum);
+      if(!DATA[wn]) DATA[wn]={};
+      DATA[wn].reach = n(rv);
+      if(engRow)  DATA[wn].eng = pct(engRow[col]);
+      if(trRow)   DATA[wn].tr  = n(trRow[col]);
+      if(ldRow)   DATA[wn].ld  = n(ldRow[col]);
+      if(blogRow) DATA[wn].br  = n(blogRow[col]);
     }
   }
-  return vals.slice(-n);
-}
 
-function setProgress(pct, txt) {
-  document.getElementById('lfill').style.width = pct + '%';
-  document.getElementById('ltxt').textContent = txt;
-}
-
-async function loadAllData() {
-  setProgress(10, 'Загружаем KPI Онлайн...');
-
+  // ── ВК, Instagram, Telegram: точные строки листа ──
+  // Строка 67 = VK охваты, строка 60 = Insta охваты, строка 74 = Tg охваты
+  // Заголовок недель = строка 2
+  // Запрашиваем строки 2, 60, 67, 74 напрямую
   try {
-    // ── ЛИСТ KPI онлайн ──
-    // Нам нужны строки: заголовок недель (строка 2), бюджет (5), показы (6), клики (7), CTR (8)
-    // Охваты соцсетей в другом блоке того же листа (~строки 130-140 от начала блока)
-    const onlTable = await fetchSheet('KPI онлайн', 'A1:DZ200');
-    const onlMatrix = tableToMatrix(onlTable);
+    const socialRows = await gviz('KPI онлайн', 'A2:DZ74');
+    // row 2 (idx 0) = заголовок недель первого блока
+    const weekHdr2 = socialRows[0] || [];
+    // row 60 (idx 58) = Insta охваты
+    const igDataRow = socialRows[58] || [];
+    // row 67 (idx 65) = VK охваты
+    const vkDataRow = socialRows[65] || [];
+    // row 74 (idx 72) = TG охваты
+    const tgDataRow = socialRows[72] || [];
 
-    setProgress(30, 'Парсим Онлайн...');
-
-    // Находим строку с заголовком недель (содержит числа типа 1, 2, 3...)
-    // Ищем строку с "Бюджет" для определения структуры
-    const budgetRow  = findRow(onlMatrix, 'бюджет директ');
-    const showsRow   = findRow(onlMatrix, 'показы директ');
-    const clicksRow  = findRow(onlMatrix, 'клики директ');
-    const ctrRow     = findRow(onlMatrix, 'ctr');
-
-    // Строка с заголовками недель - ищем строку где много чисел подряд
-    let weeksRow = null;
-    let weeksRowIdx = -1;
-    for (let i = 0; i < Math.min(onlMatrix.length, 10); i++) {
-      const row = onlMatrix[i];
-      const nums = row.filter(v => v != null && typeof v === 'number' && v > 0 && v < 60);
-      if (nums.length > 10) { weeksRow = row; weeksRowIdx = i; break; }
+    for(let col=1;col<weekHdr2.length;col++) {
+      const wNum=weekHdr2[col];
+      if(typeof wNum!=='number'||wNum<1||wNum>60) continue;
+      const wn=Math.round(wNum);
+      if(!DATA[wn]) DATA[wn]={};
+      if(igDataRow[col]!=null) DATA[wn].ig = n(igDataRow[col]);
+      if(vkDataRow[col]!=null) DATA[wn].vk = n(vkDataRow[col]);
+      if(tgDataRow[col]!=null) DATA[wn].tg = n(tgDataRow[col]);
     }
+  } catch(e) { console.warn('Соцсети строки:', e.message); }
+}
 
-    // Строка с датами (следующая после недель)
-    const datesRow = weeksRow && weeksRowIdx >= 0 ? onlMatrix[weeksRowIdx + 1] : null;
+async function loadCRM() {
+  const matrix = await gviz('KPI CRM', 'A1:DZ200');
+  const wr = getWeeksRow(matrix);
+  if(!wr) return;
+  const weeksRow = wr.row;
 
-    // Определяем структуру колонок по бюджету
-    if (budgetRow) {
-      const lastVals = lastNValues(budgetRow, 30, 1);
+  const guestsRow  = findRow(matrix,'сеть факт');
+  const loyalRow   = findRow(matrix,'гостей с картой');
+  const pctRow     = findRow(matrix,'постоянных гостей');
+  const cardsRow   = findRow(matrix,'бонусных карт');
+  const drRow      = findRow(matrix,'количество др');
+  const tueRow     = findRow(matrix,'бесплатный вторник');
 
-      // Строим список недель из заголовков
-      // Ищем колонки недель 2025 — последовательные числа 1-52
-      WEEKS = [];
-      DATA  = {};
-
-      // Для каждого непустого значения в budgetRow определяем неделю
-      lastVals.forEach(({ idx, val }) => {
-        if (!weeksRow || idx >= weeksRow.length) return;
-        const wNum = weeksRow[idx];
-        const wDate = datesRow ? datesRow[idx] : null;
-
-        // Пропускаем месячные итоги (не числа или > 60)
-        if (!wNum || typeof wNum !== 'number' || wNum > 60 || wNum < 1) return;
-        // Пропускаем #REF, #DIV
-        if (!val || String(val).includes('REF') || String(val).includes('DIV')) return;
-
-        const n = Math.round(wNum);
-
-        // Определяем месяц по дате
-        let mo = '—', mn = 0;
-        if (wDate) {
-          const ds = String(wDate).toLowerCase();
-          if (ds.includes('янв') || ds.match(/\d+\.\d+\.01/)) { mo='Январь';   mn=1; }
-          else if (ds.includes('фев') || ds.match(/\d+\.\d+\.02/)) { mo='Февраль'; mn=2; }
-          else if (ds.includes('мар') || ds.match(/\d+\.\d+\.03/)) { mo='Март';    mn=3; }
-          else if (ds.includes('апр') || ds.match(/\d+\.\d+\.04/)) { mo='Апрель';  mn=4; }
-          else if (ds.includes('май') || ds.includes('мая') || ds.match(/\d+\.\d+\.05/)) { mo='Май'; mn=5; }
-          else if (ds.includes('июн') || ds.match(/\d+\.\d+\.06/)) { mo='Июнь'; mn=6; }
-          else {
-            // Попробуем угадать по номеру недели
-            if (n >= 1  && n <= 4)  { mo='Январь';  mn=1; }
-            else if (n >= 5 && n <= 8)  { mo='Февраль'; mn=2; }
-            else if (n >= 9 && n <= 13) { mo='Март';    mn=3; }
-            else if (n >= 14&& n <= 17) { mo='Апрель';  mn=4; }
-            else if (n >= 18&& n <= 22) { mo='Май';     mn=5; }
-          }
-        } else {
-          if (n>=1&&n<=4){mo='Январь';mn=1}
-          else if(n>=5&&n<=8){mo='Февраль';mn=2}
-          else if(n>=9&&n<=13){mo='Март';mn=3}
-          else if(n>=14&&n<=17){mo='Апрель';mn=4}
-          else if(n>=18&&n<=22){mo='Май';mn=5}
-        }
-
-        if (!WEEKS.find(w => w.n === n)) {
-          WEEKS.push({ n, dates: String(wDate||'').replace(/\s+/g,' ').trim(), mo, mn, _col: idx });
-        }
-
-        if (!DATA[n]) DATA[n] = {};
-        DATA[n].budget = typeof val === 'number' ? val : parseFloat(String(val).replace(/[^\d.,]/g,'').replace(',','.')) || null;
-        if (showsRow && idx < showsRow.length) DATA[n].shows  = numVal(showsRow[idx]);
-        if (clicksRow&& idx < clicksRow.length) DATA[n].clicks = numVal(clicksRow[idx]);
-        if (ctrRow   && idx < ctrRow.length)   DATA[n].ctr   = ctrRow[idx] != null ? formatPct(ctrRow[idx]) : null;
-      });
-    }
-
-    setProgress(50, 'Загружаем CRM...');
-
-    // ── ЛИСТ KPI CRM ──
-    const crmTable = await fetchSheet('KPI CRM', 'A1:DZ200');
-    const crmMatrix = tableToMatrix(crmTable);
-
-    // Ищем строки CRM
-    const guestsFactRow = findRow(crmMatrix, 'сеть факт');
-    const loyalRow      = findRow(crmMatrix, 'гостей с картой');
-    const pctRow        = findRow(crmMatrix, 'постоянных гостей');
-    const cardsRow      = findRow(crmMatrix, 'бонусных карт');
-    const drRow         = findRow(crmMatrix, 'количество др');
-    const tuesdayRow    = findRow(crmMatrix, 'бесплатный вторник');
-
-    // Заголовок недель в CRM
-    let crmWeeksRow = null;
-    for (let i = 0; i < Math.min(crmMatrix.length, 5); i++) {
-      const row = crmMatrix[i];
-      const nums = row.filter(v => v != null && typeof v === 'number' && v > 0 && v < 60);
-      if (nums.length > 8) { crmWeeksRow = row; break; }
-    }
-
-    if (guestsFactRow && crmWeeksRow) {
-      const lastVals = lastNValues(guestsFactRow, 25, 1);
-      lastVals.forEach(({ idx, val }) => {
-        const wNum = crmWeeksRow[idx];
-        if (!wNum || typeof wNum !== 'number' || wNum > 60) return;
-        const n = Math.round(wNum);
-        if (!DATA[n]) DATA[n] = {};
-        DATA[n].guests = numVal(val);
-        if (loyalRow   && idx < loyalRow.length)   DATA[n].loyal   = numVal(loyalRow[idx]);
-        if (pctRow     && idx < pctRow.length)     DATA[n].pct     = formatPct(pctRow[idx]);
-        if (cardsRow   && idx < cardsRow.length)   DATA[n].cards   = numVal(cardsRow[idx]);
-        if (drRow      && idx < drRow.length)      DATA[n].dr      = numVal(drRow[idx]);
-        if (tuesdayRow && idx < tuesdayRow.length) DATA[n].tue     = numVal(tuesdayRow[idx]);
-      });
-    }
-
-    setProgress(70, 'Загружаем Сайт...');
-
-    // ── ЛИСТ KPI Сайт ──
-    try {
-      const siteTable = await fetchSheet('KPI Сайт', 'A1:DZ100');
-      const siteMatrix = tableToMatrix(siteTable);
-      const visRow  = findRow(siteMatrix, 'посетители') || findRow(siteMatrix, 'все посетители');
-      const bookRow = findRow(siteMatrix, 'онлайн бронь') || findRow(siteMatrix, 'кол-во онлайн');
-      const convRow = findRow(siteMatrix, 'конверсия в онлайн');
-
-      let siteWeeksRow = null;
-      for (let i = 0; i < Math.min(siteMatrix.length, 5); i++) {
-        const row = siteMatrix[i];
-        const nums = row.filter(v => v!=null && typeof v==='number' && v>0 && v<60);
-        if (nums.length > 6) { siteWeeksRow = row; break; }
-      }
-
-      if (visRow && siteWeeksRow) {
-        lastNValues(visRow, 20, 1).forEach(({ idx, val }) => {
-          const wNum = siteWeeksRow[idx];
-          if (!wNum || typeof wNum !== 'number' || wNum > 60) return;
-          const n = Math.round(wNum);
-          if (!DATA[n]) DATA[n] = {};
-          DATA[n].vis  = numVal(val);
-          if (bookRow && idx < bookRow.length) DATA[n].book     = numVal(bookRow[idx]);
-          if (convRow && idx < convRow.length) DATA[n].siteConv = formatPct(convRow[idx]);
-        });
-      }
-    } catch(e) { console.warn('Сайт не загрузился:', e.message); }
-
-    setProgress(85, 'Загружаем соцсети...');
-
-    // Охваты соцсетей из KPI онлайн (второй блок)
-    const reachRow   = findRow(onlMatrix, 'охваты сеть');
-    const engRow     = findRow(onlMatrix, 'вовлечённость') || findRow(onlMatrix, 'вовлеченность');
-    const trRow      = findRow(onlMatrix, 'переходы сеть');
-    const leadsRow2  = findRow(onlMatrix, 'лиды сеть');
-    const vkRow      = onlMatrix.find(r => r[0] && String(r[0]).toLowerCase() === 'вконтакте' ||
-                                           r[0] && String(r[0]).toLowerCase().includes('охват') && String(r[1]||'').toLowerCase().includes('вк'));
-
-    // Ищем строку с охватами соцсетей по второму блоку
-    // В нашей таблице это строки 190+ от начала
-    // Берём все строки у которых первая ячейка = "Охваты сеть"
-    const allReachRows = onlMatrix.filter(r => r[0] && String(r[0]).toLowerCase().includes('охваты сеть'));
-    const socialReachRow = allReachRows.length > 1 ? allReachRows[allReachRows.length-1] : (allReachRows[0] || null);
-
-    // Находим строку заголовков для второго блока (та что перед охватами)
-    let socialWeeksRow = null;
-    if (socialReachRow) {
-      const ri = onlMatrix.indexOf(socialReachRow);
-      for (let i = Math.max(0, ri-5); i < ri; i++) {
-        const row = onlMatrix[i];
-        const nums = row.filter(v => v!=null && typeof v==='number' && v>0 && v<60);
-        if (nums.length > 6) { socialWeeksRow = row; break; }
-      }
-    }
-
-    if (socialReachRow && socialWeeksRow) {
-      lastNValues(socialReachRow, 20, 1).forEach(({ idx, val }) => {
-        const wNum = socialWeeksRow[idx];
-        if (!wNum || typeof wNum !== 'number' || wNum > 60) return;
-        const n = Math.round(wNum);
-        if (!DATA[n]) DATA[n] = {};
-        DATA[n].reach = numVal(val);
-        const engRowSoc = onlMatrix.find(r => r[0] && String(r[0]).toLowerCase().includes('вовлеч'));
-        if (engRowSoc && idx < engRowSoc.length) DATA[n].eng = formatPct(engRowSoc[idx]);
-        const trRowSoc = onlMatrix.find(r => r[0] && String(r[0]).toLowerCase().includes('переходы сеть'));
-        if (trRowSoc && idx < trRowSoc.length) DATA[n].tr = numVal(trRowSoc[idx]);
-        const ldRowSoc = onlMatrix.find(r => r[0] && String(r[0]).toLowerCase().includes('лиды сеть'));
-        if (ldRowSoc && idx < ldRowSoc.length) DATA[n].ld = numVal(ldRowSoc[idx]);
-      });
-    }
-
-    // Сортируем недели по номеру
-    WEEKS.sort((a, b) => a.n - b.n);
-
-    // Если WEEKS пустой — строим из DATA
-    if (WEEKS.length === 0 && Object.keys(DATA).length > 0) {
-      const MONTHS = ['','Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
-      const MONTH_NUM = {1:1,2:1,3:1,4:1,5:2,6:2,7:2,8:2,9:3,10:3,11:3,12:3,13:3,14:4,15:4,16:4,17:4,18:5,19:5,20:5,21:5,22:5};
-      Object.keys(DATA).sort((a,b)=>+a-+b).forEach(n => {
-        const mn = MONTH_NUM[n] || Math.ceil(n/4);
-        WEEKS.push({ n: +n, dates:`Нед. ${n}`, mo: MONTHS[mn]||'—', mn, _col: 0 });
-      });
-    }
-
-    setProgress(100, 'Готово!');
-    await pause(200);
-    return true;
-
-  } catch (err) {
-    console.error('Ошибка загрузки:', err);
-    showError('Не удалось загрузить данные: ' + err.message + '. Используются кэшированные данные.');
-    loadFallback();
-    return false;
+  if(!guestsRow) return;
+  for(let col=1;col<guestsRow.length;col++) {
+    const wNum=weeksRow[col];
+    if(typeof wNum!=='number'||wNum<1||wNum>60) continue;
+    const gv=guestsRow[col];
+    if(gv==null) continue;
+    const wn=Math.round(wNum);
+    if(!DATA[wn]) DATA[wn]={};
+    DATA[wn].guests = n(gv);
+    if(loyalRow)  DATA[wn].loyal  = n(loyalRow[col]);
+    if(pctRow)    DATA[wn].pct    = pct(pctRow[col]);
+    if(cardsRow)  DATA[wn].cards  = n(cardsRow[col]);
+    if(drRow)     DATA[wn].dr     = n(drRow[col]);
+    if(tueRow)    DATA[wn].tue    = n(tueRow[col]);
   }
 }
 
-// ═══════════════════════════════════════════════════════════
-// FALLBACK — данные на случай если API недоступен
-// ═══════════════════════════════════════════════════════════
+async function loadSite() {
+  try {
+    const matrix = await gviz('KPI Сайт', 'A1:DZ100');
+    const wr = getWeeksRow(matrix);
+    if(!wr) return;
+    const weeksRow = wr.row;
+    const visRow   = findRow(matrix,'посетители') || findRow(matrix,'все посетители');
+    const bookRow  = findRow(matrix,'онлайн бронь') || findRow(matrix,'кол-во онлайн');
+    const convRow  = findRow(matrix,'конверсия в онлайн');
+    if(!visRow) return;
+    for(let col=1;col<visRow.length;col++) {
+      const wNum=weeksRow[col];
+      if(typeof wNum!=='number'||wNum<1||wNum>60) continue;
+      const vv=visRow[col];
+      if(vv==null) continue;
+      const wn=Math.round(wNum);
+      if(!DATA[wn]) DATA[wn]={};
+      DATA[wn].vis      = n(vv);
+      if(bookRow) DATA[wn].book     = n(bookRow[col]);
+      if(convRow) DATA[wn].siteConv = pct(convRow[col]);
+    }
+  } catch(e) { console.warn('Сайт:', e.message); }
+}
+
+// СТЕНДАПЫ
+const STANDUP_ID = '1lBSm8r0OiYqWpa8T9tmFcBTnhPSnmIjN-sxVgEH-DMA';
+let STANDUPS = [];
+
+async function loadStandups() {
+  try {
+    const url = `https://docs.google.com/spreadsheets/d/${STANDUP_ID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent('2026')}&range=A1:N100`;
+    const resp = await fetch(url);
+    const text = await resp.text();
+    const json = JSON.parse(text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\)/)[1]);
+    const rows = (json.table?.rows||[]).map(row=>(row.c||[]).map(c=>c?.v??null));
+    STANDUPS = [];
+    for(let i=1;i<rows.length;i++) {
+      const row=rows[i];
+      if(!row||row.length<4) continue;
+      const colM = row[12]; // col M — если пустой, пропускаем
+      if(colM==null||colM===''||colM===false) continue;
+      const date   = row[0]!=null ? String(row[0]).trim() : '';
+      const venue  = row[2]!=null ? String(row[2]).trim() : '';
+      const artist = row[3]!=null ? String(row[3]).trim() : '';
+      const org    = row[5]!=null ? String(row[5]).trim() : '';
+      const tickets= row[6]!=null ? Number(row[6]) : null;
+      const status = row[7]!=null ? String(row[7]).trim() : '';
+      if(!artist&&!venue) continue;
+      STANDUPS.push({date,venue,artist,org,tickets,status});
+    }
+  } catch(e) { console.warn('Стендапы:', e.message); }
+}
+
+async function loadAll() {
+  setP(10,'KPI Онлайн...');
+  await loadOnline();
+  setP(45,'KPI CRM...');
+  await loadCRM();
+  setP(65,'KPI Сайт...');
+  await loadSite();
+  setP(82,'Стендапы...');
+  await loadStandups();
+  setP(100,'Готово!');
+  await pause(150);
+  WEEKS.sort((a,b)=>a.n-b.n);
+}
+
 function loadFallback() {
-  WEEKS = [
-    {n:14,dates:'31.03–06.04',mo:'Апрель',mn:4},{n:15,dates:'07.04–13.04',mo:'Апрель',mn:4},
-    {n:16,dates:'14.04–20.04',mo:'Апрель',mn:4},{n:17,dates:'21.04–27.04',mo:'Апрель',mn:4},
+  WEEKS=[
+    {n:14,dates:'31.03–06.04',mo:'Апрель',mn:4},
+    {n:15,dates:'07.04–13.04',mo:'Апрель',mn:4},
+    {n:16,dates:'14.04–20.04',mo:'Апрель',mn:4},
+    {n:17,dates:'21.04–27.04',mo:'Апрель',mn:4},
   ];
-  DATA = {
-    14:{budget:232622,shows:1253171,clicks:8200,ctr:'0,65%',reach:266980,eng:'4,26%',tr:1514,ld:2007,vk:19137,br:525253,guests:9042,loyal:1023,pct:'11%',cards:2062,dr:11,tue:18,vis:26301,book:null,siteConv:null},
-    15:{budget:247607,shows:1252849,clicks:7404,ctr:'0,59%',reach:305005,eng:'6,93%',tr:1416,ld:1589,vk:21823,br:null,guests:9786,loyal:1022,pct:'10%',cards:2354,dr:13,tue:1,vis:null,book:null,siteConv:null},
-    16:{budget:254323,shows:1301616,clicks:7629,ctr:'0,59%',reach:349367,eng:'5,20%',tr:1318,ld:1637,vk:22055,br:null,guests:8718,loyal:843,pct:'10%',cards:1621,dr:9,tue:21,vis:null,book:null,siteConv:null},
-    17:{budget:252009,shows:1232499,clicks:6856,ctr:'0,56%',reach:417420,eng:'4,29%',tr:1549,ld:1721,vk:21376,br:null,guests:7956,loyal:765,pct:'10%',cards:1776,dr:11,tue:6,vis:null,book:null,siteConv:null},
+  DATA={
+    14:{budget:232622,shows:1253171,clicks:8200,ctr:'0,65%',reach:266980,eng:'4,3%',tr:1514,ld:2007,vk:19137,ig:null,tg:null,br:525253,guests:9042,loyal:1023,pct:'11%',cards:2062,dr:11,tue:18,vis:26301,book:null,siteConv:null},
+    15:{budget:247607,shows:1252849,clicks:7404,ctr:'0,59%',reach:305005,eng:'6,9%',tr:1416,ld:1589,vk:21823,ig:null,tg:null,br:null,guests:9786,loyal:1022,pct:'10%',cards:2354,dr:13,tue:1,vis:null,book:null,siteConv:null},
+    16:{budget:254323,shows:1301616,clicks:7629,ctr:'0,59%',reach:349367,eng:'5,2%',tr:1318,ld:1637,vk:22055,ig:null,tg:null,br:null,guests:8718,loyal:843,pct:'10%',cards:1621,dr:9,tue:21,vis:null,book:null,siteConv:null},
+    17:{budget:252009,shows:1232499,clicks:6856,ctr:'0,56%',reach:417420,eng:'4,3%',tr:1549,ld:1721,vk:21376,ig:null,tg:null,br:null,guests:7956,loyal:765,pct:'10%',cards:1776,dr:11,tue:6,vis:null,book:null,siteConv:null},
   };
 }
 
-// ═══════════════════════════════════════════════════════════
-// ХЕЛПЕРЫ
-// ═══════════════════════════════════════════════════════════
-function numVal(v) {
-  if (v == null || v === '') return null;
-  if (typeof v === 'number') return v;
-  const s = String(v).replace(/[^\d.,-]/g,'').replace(',','.').replace(/\s/g,'');
-  const n = parseFloat(s);
-  return isNaN(n) ? null : n;
-}
-function formatPct(v) {
-  if (v == null) return null;
-  if (typeof v === 'number') return (v * (v < 1 ? 100 : 1)).toFixed(2).replace('.',',') + '%';
-  const s = String(v);
-  if (s.includes('%')) return s.replace('.',',');
-  const n = parseFloat(s.replace(',','.'));
-  if (!isNaN(n)) return (n * (n < 1 ? 100 : 1)).toFixed(2).replace('.',',') + '%';
-  return s;
-}
-const fN = n => n==null?'—':n>=1e6?(n/1e6).toFixed(1)+'М':n>=1000?(n/1000).toFixed(1)+'К':String(Math.round(n));
-const fR = n => n==null?'—':n>=1e6?(n/1e6).toFixed(1)+' М₽':n>=1000?Math.round(n/1000)+' К₽':n+' ₽';
-const fF = n => n==null||isNaN(n)?'—':Math.round(n).toLocaleString('ru-RU');
-const sv = (id,v) => { const e=document.getElementById(id); if(e) e.textContent = v ?? '—'; };
-const pause = ms => new Promise(r => setTimeout(r, ms));
+// ═══════════════════════════════════════════════
+// ФОРМАТИРОВАНИЕ
+// ═══════════════════════════════════════════════
+const fN=v=>v==null?'—':v>=1e6?(v/1e6).toFixed(1)+'М':v>=1000?(v/1000).toFixed(1)+'К':String(Math.round(v));
+const fR=v=>v==null?'—':v>=1e6?(v/1e6).toFixed(1)+' М₽':v>=1000?Math.round(v/1000)+' К₽':v+' ₽';
+const fF=v=>v==null||isNaN(v)?'—':Math.round(v).toLocaleString('ru-RU');
+const sv=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v??'—'};
+const pause=ms=>new Promise(r=>setTimeout(r,ms));
+const setP=(p,t)=>{document.getElementById('lfill').style.width=p+'%';document.getElementById('ltxt').textContent=t};
 
-function showError(msg) {
-  const el = document.getElementById('errBox');
-  if (!el) return;
-  el.textContent = '⚠️ ' + msg;
-  el.style.display = 'block';
-}
-
-function dd(dId, pId, c, p, pLabel, fn=fF, hg=true) {
-  const de=document.getElementById(dId), pe=document.getElementById(pId);
-  if(!de) return;
-  if(c==null||p==null||p===0){de.innerHTML='';if(pe)pe.textContent='';return;}
-  const d=((c-p)/p*100), dn=parseFloat(d.toFixed(1));
-  const good=hg?(dn>0):(dn<0);
+function mkDelta(dId,pId,c,p,pn,fn=fF,hg=true) {
+  const de=document.getElementById(dId),pe=document.getElementById(pId);
+  if(!de)return;
+  if(c==null||p==null||p===0){de.innerHTML='';if(pe)pe.textContent='';return}
+  const d=(c-p)/p*100,dn=parseFloat(d.toFixed(1));
+  const good=hg?dn>0:dn<0;
   const cls=Math.abs(dn)<0.5?'dfl':good?'dup':'ddn';
   de.innerHTML=`<span class="kd ${cls}">${dn>0?'↑':'↓'} ${Math.abs(dn).toFixed(1)}%</span>`;
-  if(pe) pe.textContent=`vs Нед.${pLabel}: ${fn(p)}`;
+  if(pe)pe.textContent=`vs Нед.${pn}: ${fn(p)}`;
 }
-
-function ctrDelta(dId, pId, cv, pv, pLabel) {
-  const de=document.getElementById(dId), pe=document.getElementById(pId);
-  if(!de||!cv||!pv) return;
-  const c=parseFloat(cv.replace(',','.').replace('%','')), p=parseFloat(pv.replace(',','.').replace('%',''));
-  if(!p) return;
+function ctrDelta(dId,pId,cv,pv,pn){
+  const de=document.getElementById(dId),pe=document.getElementById(pId);
+  if(!de||!cv||!pv)return;
+  const c=parseFloat(cv.replace(',','.').replace(/\s/g,'').replace('%','')),p=parseFloat(pv.replace(',','.').replace(/\s/g,'').replace('%',''));
+  if(!p)return;
   const dn=parseFloat(((c-p)/p*100).toFixed(1));
   const cls=Math.abs(dn)<0.5?'dfl':dn>0?'dup':'ddn';
   de.innerHTML=`<span class="kd ${cls}">${dn>0?'↑':'↓'} ${Math.abs(dn).toFixed(1)}%</span>`;
-  if(pe) pe.textContent=`vs Нед.${pLabel}: ${pv}`;
+  if(pe)pe.textContent=`vs Нед.${pn}: ${pv}`;
 }
 
-// ═══════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════
 // UI
-// ═══════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════
 function buildUI(ok) {
-  document.getElementById('hdrDate').textContent = new Date().toLocaleDateString('ru-RU',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-  document.getElementById('upd').textContent = new Date().toLocaleTimeString('ru-RU');
+  document.getElementById('hdrDate').textContent=new Date().toLocaleDateString('ru-RU',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  document.getElementById('upd').textContent=new Date().toLocaleTimeString('ru-RU');
+  const dot=document.getElementById('statusDot'),stxt=document.getElementById('statusText');
+  if(ok){dot.classList.remove('red');stxt.innerHTML='Google Sheets · <strong style="color:var(--text)">Дашборд отдела маркетинга</strong>';}
+  else{dot.classList.add('red');stxt.textContent='Офлайн · кэш данных';}
 
-  const dot = document.getElementById('statusDot');
-  const stxt = document.getElementById('statusText');
-  if (ok) {
-    dot.classList.remove('red');
-    stxt.innerHTML = `Google Sheets · <strong style="color:var(--text)">Дашборд отдела маркетинга</strong>`;
-  } else {
-    dot.classList.add('red');
-    stxt.textContent = 'Офлайн · кэш данных';
-  }
-
-  const sel = document.getElementById('wsel');
-  sel.innerHTML = '';
-  WEEKS.forEach((w,i) => {
-    const o = document.createElement('option');
-    o.value = i;
-    o.textContent = `Нед. ${w.n}  ·  ${w.dates}  ·  ${w.mo}`;
-    if (i === cur) o.selected = true;
+  const sel=document.getElementById('wsel');
+  sel.innerHTML='';
+  WEEKS.forEach((w,i)=>{
+    const o=document.createElement('option');
+    o.value=i;
+    o.textContent=`Нед. ${w.n}  ·  ${w.dates||''}  ·  ${w.mo}`;
+    if(i===cur)o.selected=true;
     sel.appendChild(o);
   });
 
-  // Статика
-  renderCities();
   renderLocs();
-
-  sv('off-reach', fN(OFF_TOTAL.reach));
-  sv('off-tr',    fF(OFF_TOTAL.tr));
-  sv('off-cv',    OFF_TOTAL.cv);
+  renderStandups();
 }
 
-function renderCities() {
-  document.getElementById('cityGrid').innerHTML = CITIES.map(c => `
+function renderStandups() {
+  const el = document.getElementById('standupCard');
+  if(!el) return;
+  if(!STANDUPS||STANDUPS.length===0) {
+    el.innerHTML='<div class="std-empty">Нет актуальных мероприятий с данными (столбец M пуст)</div>';
+    return;
+  }
+  // Группируем по месяцам
+  const months = {};
+  STANDUPS.forEach(s => {
+    const mo = s.date ? s.date.split(' ').slice(-1)[0]||s.date : '—';
+    if(!months[mo]) months[mo]=[];
+    months[mo].push(s);
+  });
+
+  let html = '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;padding:4px 0">';
+  STANDUPS.forEach(s => {
+    const sold = s.status && (s.status.toLowerCase().includes('sold')||s.status.toLowerCase().includes('ок'));
+    const statusColor = sold ? 'var(--green)' : 'var(--t2)';
+    html += `
+      <div style="padding:12px 14px;background:rgba(255,255,255,.03);border-radius:10px;border:1px solid var(--glass-b)">
+        <div style="font-size:9px;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:6px">${s.date}</div>
+        <div style="font-size:13px;font-weight:600;margin-bottom:3px;line-height:1.3">${s.artist||'—'}</div>
+        <div style="font-size:10px;color:var(--t2);margin-bottom:6px">${s.venue||'—'}</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px">
+          ${s.tickets ? `<span style="font-size:10px;color:var(--t3)">${s.tickets} билетов</span>` : ''}
+          ${s.org ? `<span style="font-size:9px;color:var(--t3)">орг: ${s.org}</span>` : ''}
+          ${s.status ? `<span style="font-size:9px;font-weight:600;color:${statusColor}">${s.status}</span>` : ''}
+        </div>
+      </div>`;
+  });
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+function renderLocs() {
+  document.getElementById('locGrid').innerHTML=LOCS.map(l=>`
+    <div class="olc g">
+      <div class="olc-n">${l.n}</div>
+      <div class="olc-r">
+        <div><div class="olc-ml">Выручка</div><div class="olc-mv">${fR(l.r)}</div></div>
+        <div><div class="olc-ml">Гости</div><div class="olc-mv">${fF(l.g)}</div></div>
+        <div><div class="olc-ml">Чек</div><div class="olc-mv" style="font-size:11px;color:var(--t2)">${l.ch.toLocaleString('ru-RU')} ₽</div></div>
+      </div>
+      ${l.lfl?`<div style="margin-top:6px"><span class="kd ddn">${l.lfl} ЛФЛ</span></div>`:''}
+    </div>`).join('');
+}
+
+// ═══════════════════════════════════════════════
+// ОФФЛАЙН — рендер по текущему месяцу
+// ═══════════════════════════════════════════════
+function renderOffline(currentMonth) {
+  // Логика: апрель → данные марта, май → данные апреля
+  const off = OFFLINE_MONTHLY[currentMonth] || OFFLINE_MONTHLY[4];
+  const hasData = off.total.reach != null;
+
+  document.getElementById('offMonthBadge').textContent = `Данные за ${off.label}`;
+  document.getElementById('off-reach').textContent = hasData ? fN(off.total.reach) : '—';
+  document.getElementById('off-tr').textContent    = hasData ? fF(off.total.tr)    : '—';
+  document.getElementById('off-cv').textContent    = hasData ? off.total.cv        : '—';
+
+  const grid=document.getElementById('cityGrid');
+  if(!hasData||off.cities.length===0){
+    grid.innerHTML=`<div class="kc g" style="grid-column:1/-1"><div class="std-empty">Данные за ${off.label} появятся по итогу месяца</div></div>`;
+    return;
+  }
+  grid.innerHTML=off.cities.map(c=>`
     <div class="cc g">
       <div class="cn">${c.city}</div>
       <div class="cm">
@@ -693,101 +674,101 @@ function renderCities() {
     </div>`).join('');
 }
 
-function renderLocs() {
-  document.getElementById('locGrid').innerHTML = LOCS.map(l => `
-    <div class="olc g">
-      <div class="olc-n">${l.n}</div>
-      <div class="olc-r">
-        <div><div class="olc-ml">Выручка</div><div class="olc-mv">${fR(l.r)}</div></div>
-        <div><div class="olc-ml">Гости</div><div class="olc-mv">${fF(l.g)}</div></div>
-        <div><div class="olc-ml">Чек</div><div class="olc-mv" style="font-size:11px;color:var(--t2)">${l.ch.toLocaleString('ru-RU')} ₽</div></div>
-      </div>
-      ${l.lfl ? `<div style="margin-top:7px"><span class="kd ddn">${l.lfl} ЛФЛ</span></div>` : ''}
-    </div>`).join('');
-}
+// ═══════════════════════════════════════════════
+// НАВИГАЦИЯ
+// ═══════════════════════════════════════════════
+function shift(d){const ni=cur+d;if(ni<0||ni>=WEEKS.length)return;cur=ni;document.getElementById('wsel').value=cur;renderWeek(cur)}
+function jump(v){cur=parseInt(v);renderWeek(cur)}
 
-// ═══════════════════════════════════════════════════════════
-// НАВИГАЦИЯ И РЕНДЕР
-// ═══════════════════════════════════════════════════════════
-function shift(d) { const n=cur+d; if(n<0||n>=WEEKS.length)return; cur=n; document.getElementById('wsel').value=cur; renderWeek(cur); }
-function jump(v)  { cur=parseInt(v); renderWeek(cur); }
-
+// ═══════════════════════════════════════════════
+// РЕНДЕР НЕДЕЛИ
+// ═══════════════════════════════════════════════
 function renderWeek(idx) {
-  const w = WEEKS[idx];
-  if (!w) return;
-  const n = w.n, pn = idx > 0 ? WEEKS[idx-1].n : null;
+  const w=WEEKS[idx];
+  if(!w)return;
+  const wn=w.n,pn=idx>0?WEEKS[idx-1].n:null;
 
-  document.getElementById('hdrWk').textContent = `Неделя ${n}  ·  ${w.dates}`;
-  document.getElementById('bPrev').disabled = idx === 0;
-  document.getElementById('bNext').disabled = idx === WEEKS.length - 1;
+  document.getElementById('hdrWk').textContent=`Неделя ${wn}  ·  ${w.dates||w.mo}`;
+  document.getElementById('bPrev').disabled=idx===0;
+  document.getElementById('bNext').disabled=idx===WEEKS.length-1;
 
-  const d = DATA[n] || {}, dp = pn ? (DATA[pn] || {}) : {};
+  const d=DATA[wn]||{}, dp=pn?DATA[pn]||{}:{};
 
   // Онлайн
-  sv('o-bud', fR(d.budget));    dd('o-bud-d','o-bud-p', d.budget, dp.budget, pn, fR);
-  sv('o-sh',  fN(d.shows));     dd('o-sh-d','o-sh-p',   d.shows,  dp.shows,  pn, fN);
-  sv('o-cl',  fF(d.clicks));    dd('o-cl-d','o-cl-p',   d.clicks, dp.clicks, pn, fF);
-  sv('o-ctr', d.ctr||'—');
-  if(pn && d.ctr && dp.ctr) ctrDelta('o-ctr-d','o-ctr-p', d.ctr, dp.ctr, pn);
-  else { const e=document.getElementById('o-ctr-d'); if(e) e.innerHTML=''; }
+  sv('o-bud',fR(d.budget));    mkDelta('o-bud-d','o-bud-p',d.budget,dp.budget,pn,fR);
+  sv('o-sh', fN(d.shows));     mkDelta('o-sh-d', 'o-sh-p', d.shows, dp.shows, pn,fN);
+  sv('o-cl', fF(d.clicks));    mkDelta('o-cl-d', 'o-cl-p', d.clicks,dp.clicks,pn,fF);
+  sv('o-ctr',d.ctr||'—');
+  if(pn&&d.ctr&&dp.ctr) ctrDelta('o-ctr-d','o-ctr-p',d.ctr,dp.ctr,pn);
+  else{const e=document.getElementById('o-ctr-d');if(e)e.innerHTML='';}
 
   // Соцсети
-  sv('o-reach', fN(d.reach));   dd('o-reach-d','o-reach-p', d.reach, dp.reach, pn, fN);
-  sv('o-eng',   d.eng||'—');
-  sv('o-tr',    fF(d.tr));      dd('o-tr-d','o-tr-p', d.tr, dp.tr, pn, fF);
-  sv('o-ld',    fF(d.ld));      dd('o-ld-d','o-ld-p', d.ld, dp.ld, pn, fF);
-  sv('o-vk',    d.vk ? fF(d.vk) : '—'); dd('o-vk-d','o-vk-p', d.vk, dp.vk, pn, fF);
-  sv('o-ig',    d.ig ? fF(d.ig) : '—');
-  sv('o-tg',    d.tg ? fF(d.tg) : '—');
-  sv('o-br',    d.br != null ? fN(d.br) : '—');
+  sv('o-reach',fN(d.reach));  mkDelta('o-reach-d','o-reach-p',d.reach,dp.reach,pn,fN);
+  sv('o-eng',  d.eng||'—');
+  const ep=document.getElementById('o-eng-p');
+  if(ep) ep.textContent=pn&&dp.eng?`vs Нед.${pn}: ${dp.eng}`:'';
+  sv('o-tr',   fF(d.tr));     mkDelta('o-tr-d','o-tr-p',d.tr,dp.tr,pn,fF);
+  sv('o-ld',   fF(d.ld));     mkDelta('o-ld-d','o-ld-p',d.ld,dp.ld,pn,fF);
+  sv('o-vk',   d.vk!=null?fF(d.vk):'—');   mkDelta('o-vk-d','o-vk-p',d.vk,dp.vk,pn,fF);
+  sv('o-ig',   d.ig!=null?fF(d.ig):'нет данных');
+  const igp=document.getElementById('o-ig-p');if(igp)igp.textContent=d.ig==null?'нет данных за период':'';
+  sv('o-tg',   d.tg!=null?fF(d.tg):'нет данных');
+  const tgp=document.getElementById('o-tg-p');if(tgp)tgp.textContent=d.tg==null?'нет данных за период':'';
+  sv('o-br',   d.br!=null?fN(d.br):'—');
+  const brp=document.getElementById('o-br-p');if(brp)brp.textContent=pn&&dp.br!=null?`vs Нед.${pn}: ${fN(dp.br)}`:'';
 
   // CRM
-  sv('c-g',   fF(d.guests));  dd('c-g-d','c-g-p',   d.guests, dp.guests, pn, fF);
-  sv('c-l',   fF(d.loyal));   dd('c-l-d','c-l-p',   d.loyal,  dp.loyal,  pn, fF);
-  sv('c-pct', d.pct||'—');
-  const pp=document.getElementById('c-pct-p'); if(pp) pp.textContent=pn&&dp.pct?`vs Нед.${pn}: ${dp.pct}`:'';
+  sv('c-g',  fF(d.guests));  mkDelta('c-g-d','c-g-p',   d.guests,dp.guests,pn,fF);
+  sv('c-l',  fF(d.loyal));   mkDelta('c-l-d','c-l-p',   d.loyal, dp.loyal, pn,fF);
+  sv('c-pct',d.pct||'—');
+  const pp=document.getElementById('c-pct-p');if(pp)pp.textContent=pn&&dp.pct?`vs Нед.${pn}: ${dp.pct}`:'';
   document.getElementById('c-pct-d').innerHTML='';
-  sv('c-cd',  fF(d.cards));   dd('c-cd-d','c-cd-p',  d.cards,  dp.cards,  pn, fF);
-  sv('c-dr',  fF(d.dr));      dd('c-dr-d','c-dr-p',  d.dr,     dp.dr,     pn, fF);
-  sv('c-tu',  fF(d.tue));     dd('c-tu-d','c-tu-p',  d.tue,    dp.tue,    pn, fF);
+  sv('c-cd', fF(d.cards));   mkDelta('c-cd-d','c-cd-p',  d.cards, dp.cards, pn,fF);
+  sv('c-dr', fF(d.dr));      mkDelta('c-dr-d','c-dr-p',  d.dr,    dp.dr,    pn,fF);
+  sv('c-tu', fF(d.tue));     mkDelta('c-tu-d','c-tu-p',  d.tue,   dp.tue,   pn,fF);
 
   // Сайт
-  sv('s-v', d.vis  != null ? fF(d.vis)  : '—');
-  sv('s-b', d.book != null ? fF(d.book) : '—');
-  sv('s-c', d.siteConv || '—');
-  if(d.vis&&dp.vis)   dd('s-v-d','s-v-p', d.vis,  dp.vis,  pn, fF);
-  else { ['s-v-d','s-v-p'].forEach(id=>{ const e=document.getElementById(id); if(e){e.innerHTML='';e.textContent=''}}); }
-  if(d.book&&dp.book) dd('s-b-d','s-b-p', d.book, dp.book, pn, fF);
-  else { ['s-b-d','s-b-p'].forEach(id=>{ const e=document.getElementById(id); if(e){e.innerHTML='';e.textContent=''}}); }
+  sv('s-v',d.vis!=null?fF(d.vis):'—');
+  sv('s-b',d.book!=null?fF(d.book):'—');
+  sv('s-c',d.siteConv||'—');
+  if(d.vis&&dp.vis) mkDelta('s-v-d','s-v-p',d.vis,dp.vis,pn,fF);
+  else{['s-v-d','s-v-p'].forEach(id=>{const e=document.getElementById(id);if(e){e.innerHTML='';e.textContent=''}});}
+  if(d.book&&dp.book) mkDelta('s-b-d','s-b-p',d.book,dp.book,pn,fF);
+  else{['s-b-d','s-b-p'].forEach(id=>{const e=document.getElementById(id);if(e){e.innerHTML='';e.textContent=''}});}
+
+  // Оффлайн — показываем данные за предыдущий месяц
+  renderOffline(w.mn);
 
   // Месяц
-  const mw = WEEKS.filter(x => x.mn === w.mn), mn_nums = mw.map(x => x.n);
-  document.getElementById('mTitle').textContent = `${w.mo} 2025`;
-  document.getElementById('mSecT').textContent  = `Итого за ${w.mo}`;
-  document.getElementById('mBadge').textContent = `${mw.length} нед. · ${w.mo}`;
-  sv('m-g', fF(mn_nums.reduce((s,x)=>s+(DATA[x]?.guests||0),0)));
-  sv('m-b', fR(mn_nums.reduce((s,x)=>s+(DATA[x]?.budget||0),0)));
-  sv('m-r', fN(mn_nums.reduce((s,x)=>s+(DATA[x]?.reach||0),0)));
-  sv('m-c', fF(mn_nums.reduce((s,x)=>s+(DATA[x]?.cards||0),0)));
-  sv('m-d', fF(Math.round(mn_nums.reduce((s,x)=>s+(DATA[x]?.dr||0),0))));
-  document.getElementById('m-gs').textContent = `${mw.length} нед. · ${w.mo}`;
+  const mw=WEEKS.filter(x=>x.mn===w.mn),mn_nums=mw.map(x=>x.n);
+  sv('mTitle',`${w.mo} 2025`);
+  document.getElementById('mSecT').textContent=`Итого за ${w.mo}`;
+  document.getElementById('mBadge').textContent=`${mw.length} нед. · ${w.mo}`;
+  sv('m-g',fF(mn_nums.reduce((s,x)=>s+(DATA[x]?.guests||0),0)));
+  sv('m-b',fR(mn_nums.reduce((s,x)=>s+(DATA[x]?.budget||0),0)));
+  sv('m-r',fN(mn_nums.reduce((s,x)=>s+(DATA[x]?.reach||0),0)));
+  sv('m-c',fF(mn_nums.reduce((s,x)=>s+(DATA[x]?.cards||0),0)));
+  sv('m-d',fF(Math.round(mn_nums.reduce((s,x)=>s+(DATA[x]?.dr||0),0))));
+  document.getElementById('m-gs').textContent=`${mw.length} нед. · ${w.mo}`;
 }
 
-// ═══════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════
 // ЗАПУСК
-// ═══════════════════════════════════════════════════════════
-window.addEventListener('DOMContentLoaded', async () => {
-  setProgress(5, 'Подключаемся к Google Sheets...');
-  const ok = await loadAllData();
-
-  if (WEEKS.length === 0) loadFallback();
-
-  // Ставим на последнюю неделю
-  cur = WEEKS.length - 1;
-
+// ═══════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded',async()=>{
+  setP(5,'Подключение...');
+  let ok=true;
+  try {
+    await loadAll();
+    if(WEEKS.length===0) throw new Error('Нет данных');
+  } catch(e) {
+    console.warn('Fallback:', e.message);
+    loadFallback();
+    ok=false;
+  }
+  cur=WEEKS.length-1;
   buildUI(ok);
   renderWeek(cur);
-
   document.getElementById('ldr').classList.add('gone');
 });
 </script>
